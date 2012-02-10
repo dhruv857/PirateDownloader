@@ -1,0 +1,35 @@
+This is a piratebay downloader which enables you to download piratebay.se in variety of formats like xml, json and csv.
+It is written in python using scrapy framework
+
+Note: It only download 
+* Title
+* Magnet link
+* Description
+I'll be adding seeders, leechers, size, upload_date and size as soon as possible (Probably by tomorrow)
+
+
+REQUIREMENTS:
+1. PYTHON
+2. SCRAPY
+
+INSTALLATION:
+You can get python from here 
+http://python.org/getit/
+
+Instruction to install SCRAPY can be found here
+http://doc.scrapy.org/en/latest/intro/install.html
+
+Usage:
+To run this program go the directory where you have downloaded this and run the following command in the terminal
+
+scrapy crawl pirate -o <output_filename> -t <output_format>
+
+EXAMPLE:
+for XML:
+scrapy crawl pirate -o items.xml -t xml
+
+for JSON
+scrapy crawl pirate -o items.json -t json
+
+for CSV
+scrapy crawl pirate -o items.csv -t csv

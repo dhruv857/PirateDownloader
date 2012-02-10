@@ -1,0 +1,5 @@
+2012-02-10 17:11:46+0530 [scrapy] INFO: Scrapy 0.14.1 started (bot: torrentcrawler)
+2012-02-10 17:11:46+0530 [scrapy] DEBUG: Enabled extensions: LogStats, TelnetConsole, CloseSpider, WebService, CoreStats, SpiderState
+2012-02-10 17:11:47+0530 [scrapy] DEBUG: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, UserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, RedirectMiddleware, CookiesMiddleware, HttpCompressionMiddleware, ChunkedTransferMiddleware, DownloaderStats
+2012-02-10 17:11:47+0530 [scrapy] DEBUG: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
+2012-02-10 17:11:47+0530 [scrapy] DEBUG: Enabled item pipelines: 

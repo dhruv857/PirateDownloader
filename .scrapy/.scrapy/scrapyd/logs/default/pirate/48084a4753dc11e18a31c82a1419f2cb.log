@@ -1,0 +1,534 @@
+2012-02-10 17:12:21+0530 [scrapy] INFO: Scrapy 0.14.1 started (bot: torrentcrawler)
+2012-02-10 17:12:21+0530 [scrapy] DEBUG: Enabled extensions: LogStats, TelnetConsole, CloseSpider, WebService, CoreStats, SpiderState
+2012-02-10 17:12:21+0530 [scrapy] DEBUG: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, UserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, RedirectMiddleware, CookiesMiddleware, HttpCompressionMiddleware, ChunkedTransferMiddleware, DownloaderStats
+2012-02-10 17:12:21+0530 [scrapy] DEBUG: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
+2012-02-10 17:12:21+0530 [scrapy] DEBUG: Enabled item pipelines: 
+2012-02-10 17:12:51+0530 [pirate] INFO: Spider opened
+2012-02-10 17:12:52+0530 [pirate] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2012-02-10 17:12:52+0530 [scrapy] DEBUG: Telnet console listening on 0.0.0.0:6024
+2012-02-10 17:12:52+0530 [scrapy] DEBUG: Web service listening on 0.0.0.0:6081
+2012-02-10 17:12:53+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000000> (referer: None)
+2012-02-10 17:12:54+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000000>
+	{'desc': [u'Nanban Tamil Enjoy!!!\t\t'],
+	 'link': [u'magnet:?xt=urn:btih:c63bf687d782ec350986fbdcc4a7eed59c7ae8f4&dn=Tamil+movie&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:c63bf687d782ec350986fbdcc4a7eed59c7ae8f4&dn=Tamil+movie&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'Tamil movie (download torrent) - TPB']}
+2012-02-10 17:12:54+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000002> (referer: None)
+2012-02-10 17:12:54+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000005> (referer: None)
+2012-02-10 17:12:54+0530 [pirate] DEBUG: Crawled (404) <GET http://thepiratebay.se/torrent/7000006> (referer: None)
+2012-02-10 17:12:54+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000003> (referer: None)
+2012-02-10 17:12:54+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000007> (referer: None)
+2012-02-10 17:12:54+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000004> (referer: None)
+2012-02-10 17:12:54+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000001> (referer: None)
+2012-02-10 17:12:54+0530 [pirate] ERROR: Spider error processing <GET http://thepiratebay.se/torrent/7000001>
+	Traceback (most recent call last):
+	  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/base.py", line 1171, in mainLoop
+	    self.runUntilCurrent()
+	  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/base.py", line 793, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 361, in callback
+	    self._startRunCallbacks(result)
+	  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 455, in _startRunCallbacks
+	    self._runCallbacks()
+	--- <exception caught here> ---
+	  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 542, in _runCallbacks
+	    current.result = callback(current.result, *args, **kw)
+	  File "torrentcrawler/spiders/pirate.py", line 26, in parse
+	    torrent['desc'] = hxs.select('//div[@class="nfo"]/pre/text()').extract()
+	  File "/Library/Python/2.7/site-packages/Scrapy-0.14.1-py2.7.egg/scrapy/selector/lxmlsel.py", line 51, in select
+	    result = self.xpathev(xpath)
+	  File "xpath.pxi", line 321, in lxml.etree.XPathElementEvaluator.__call__ (src/lxml/lxml.etree.c:117877)
+	    
+	  File "xpath.pxi", line 242, in lxml.etree._XPathEvaluatorBase._handle_result (src/lxml/lxml.etree.c:117079)
+	    
+	  File "extensions.pxi", line 546, in lxml.etree._unwrapXPathObject (src/lxml/lxml.etree.c:112539)
+	    
+	  File "extensions.pxi", line 580, in lxml.etree._createNodeSetResult (src/lxml/lxml.etree.c:112912)
+	    
+	  File "extensions.pxi", line 602, in lxml.etree._unpackNodeSetEntry (src/lxml/lxml.etree.c:113088)
+	    
+	  File "extensions.pxi", line 719, in lxml.etree._buildElementStringResult (src/lxml/lxml.etree.c:114149)
+	    
+	  File "apihelpers.pxi", line 1344, in lxml.etree.funicode (src/lxml/lxml.etree.c:21872)
+	    
+	exceptions.UnicodeDecodeError: 'utf8' codec can't decode byte 0xc3 in position 1: invalid continuation byte
+	
+2012-02-10 17:12:54+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000002>
+	{'desc': [u'.\r\n..............................Site Info...........................\r\n\r\n -  ',
+	          u'  *_*   \r\n\r\nSceneTime is going to Close sign up on march/1, hurry up! get in before the doors are closed.\r\n\r\n     We care to share . Join us on ',
+	          u' \r\n\r\n    Be the first to get new release at ',
+	          u'\r\n\r\n        Seed back for speed\r\n\r\n\r\n...................................NFO:.................................................[IMG]http://i.imgur.com/2mcr9.png[/IMG]\r\n\r\n \r\nTITLE: \r\n\r\nThe Grey 2012 TS READNFO XViD - INSPiRAL\r\n\r\nIMDB: \r\n ',
+	          u"\r\n\r\n\r\nSOURCES:\r\n\r\nVIDEO - Lum1x and youtube THANKS\r\nAUDIO - lum1x and unknown THANKS\r\nSUBS  - None Add\r\n\r\nSTATS:\r\n\r\nVideo\r\nID                               : 0\r\nFormat                           : MPEG-4 Visual\r\nFormat profile                   : Advanced Simple@L5\r\nFormat settings, BVOP            : 2\r\nFormat settings, QPel            : No\r\nFormat settings, GMC             : No warppoints\r\nFormat settings, Matrix          : Default (MPEG)\r\nMuxing mode                      : Packed bitstream\r\nCodec ID                         : XVID\r\nCodec ID/Hint                    : XviD\r\nDuration                         : 1h 50mn\r\nBit rate                         : 1 656 Kbps\r\nWidth                            : 720 pixels\r\nHeight                           : 256 pixels\r\nDisplay aspect ratio             : 2.813\r\nFrame rate                       : 25.000 fps\r\nColor space                      : YUV\r\nChroma subsampling               : 4:2:0\r\nBit depth                        : 8 bits\r\nScan type                        : Progressive\r\nCompression mode                 : Lossy\r\nBits/(Pixel*Frame)               : 0.359\r\nStream size                      : 1.28 GiB (92%)\r\nWriting library                  : XviD 64\r\n\r\nAudio\r\nID                               : 1\r\nFormat                           : MPEG Audio\r\nFormat version                   : Version 1\r\nFormat profile                   : Layer 3\r\nMode                             : Joint stereo\r\nMode extension                   : MS Stereo\r\nCodec ID                         : 55\r\nCodec ID/Hint                    : MP3\r\nDuration                         : 1h 50mn\r\nBit rate mode                    : Constant\r\nBit rate                         : 128 Kbps\r\nChannel(s)                       : 2 channels\r\nSampling rate                    : 44.1 KHz\r\nCompression mode                 : Lossy\r\nStream size                      : 101 MiB (7%)\r\nAlignment                        : Split accross interleaves\r\nInterleave, duration             : 40 ms (1.00 video frame)\r\nInterleave, preload duration     : 500 ms\r\n\r\n\r\nNOTES:\r\n\r\nKK sources used,same russian video but this time round line audio added from unknowns rip :)\r\n\r\nRight first stripped unknowns line and went to remux over my encode of the russian video but came across several issues.\r\nFirstly there was 36 secs roughly missing off the intro,1min 8 secs overlap 3/4 into the film,5.5 secs missing several mins later\r\nand the after scene was repeated at the end ....\r\nSo bascially had to go through and add the intro audio off the russian cam ,remove the min overlap and cut where the russian video\r\nended......\r\nFrom there i grabbed the after scene credit from youtube and added the audio off it to make a complete audio file that would fit\r\nover my rip.\r\nAlso cleaned the audio up in adobe using a hiss removal filter aswell as changing the EQ bands.\r\n\r\nThe video i cleaned the russian video up,changed the res ....yes it looks really thin now,but due to movement in the original russian files\r\nthe AR does change slightly throughout,so i opted to pic a res i thought looked best.\r\nAlso changed all the brightness,contrast,rgb eq,chroma,sharpness you name it :lol: .\r\nFrom there i took the youtube clip ,levelled it up and filtered that aswell and appended to my encode.\r\n\r\nReadnfo ...well basically just to say yes the runtime is different to unknowns but i removed all the black screen with credit music as i didn't\r\nsee the point,but each to their own ....but now this encode as no video overlap and full intro and the end scene after the credits .\r\nEnjoy :)\r\n\r\nOh ps .....\r\nafter i upped here ,i'm going to upload it to public sites so the mpaa can get my ip,but i'm a dumbass LMFAO ...:slap:\r\nM100 get a grip bro FFS :lol:\r\nDon't know whats worse M100 with public uploading or Zombie with twatbook and twatter ....you guys crack me up :lol:\r\n\r\n\r\nSCREENS:\r\n\r\n[IMG]http://i.imgur.com/TGggp.png[/IMG]\r\n[IMG]http://i.imgur.com/H2PLK.png[/IMG]\r\n[IMG]http://i.imgur.com/VCyqr.png[/IMG]\r\n[IMG]http://i.imgur.com/Y2QtP.png[/IMG]\r\n[IMG]http://i.imgur.com/lw8Lk.png[/IMG]\r\n[IMG]http://i.imgur.com/D9iGY.png[/IMG]\r\n[IMG]http://i.imgur.com/TrUU3.png[/IMG]\r\n\r\n\r\nGREETZ: \r\n\r\nPast,Present and Future\r\n\r\n[IMG]http://i.imgur.com/2mcr9.png[/IMG]\t\t"],
+	 'link': [u'magnet:?xt=urn:btih:fc652fb67b84ba090dca41bb549e0515ec5430e6&dn=The+Grey+2012+TS+READNFO+XViD+-+INSPiRAL&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:fc652fb67b84ba090dca41bb549e0515ec5430e6&dn=The+Grey+2012+TS+READNFO+XViD+-+INSPiRAL&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'The Grey 2012 TS READNFO XViD - INSPiRAL (download torrent) - TPB']}
+2012-02-10 17:12:54+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000005>
+	{'desc': [u'Trouble at the Slumber Party DVDRip [2012].avi\r\n\r\nBeautiful Riley Steele and ultra sexy BiBi Jones team up to host a naughty girls-only slumber party. Their hung studs, Manuel Ferrara, Marcus London and Erik Everhard, gather for a game of cards, but curiosity gets the best of the guys. They eavesdrop into the house where the girls are listen in on their dirty fantasies and perverted activities, getting nasty ideas for wild fun, too. But the girls are playing the same horny game, until they all get to score under the sheets.\r\n\r\nAndy San Dimas, Bibi Jones, Riley Steele, Vicki Chase\r\n\r\nAll sex, Teen, Oral, Hardcore, XXX, Adult\r\n\r\n624 x 352\r\n\r\n00:56:58 + 00:57:31\r\n\r\n1.36 GB\r\n\r\nScreens\r\n ',
+	          u'\r\n ',
+	          u'\r\n ',
+	          u'\r\n ',
+	          u'\t\t'],
+	 'link': [u'magnet:?xt=urn:btih:b2213d68f4b5ea5cc9713d8a186cca2e98bacd1b&dn=Trouble+at+the+Slumber+Party+DVDRip+%5B2012%5D.avi&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:b2213d68f4b5ea5cc9713d8a186cca2e98bacd1b&dn=Trouble+at+the+Slumber+Party+DVDRip+%5B2012%5D.avi&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'Trouble at the Slumber Party DVDRip [2012].avi (download torrent) - TPB']}
+2012-02-10 17:12:54+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000003>
+	{'desc': [u'DVD4 includes the final slices of the North & South American East Coasts + Eastern Europe and the West Coast of Africa\t\t'],
+	 'link': [u'magnet:?xt=urn:btih:a65d7e3f8d96da656048cf5352bc90df6267bff8&dn=X-Plane+10+DVD+3&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:a65d7e3f8d96da656048cf5352bc90df6267bff8&dn=X-Plane+10+DVD+3&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'X-Plane 10 DVD 3 (download torrent) - TPB']}
+2012-02-10 17:12:54+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000007>
+	{'desc': [u'Convert between All Key Audio Formats \r\nConvert MP3, WMA, WAV, M4A, AMR, OGG, FLAC, MP2, etc. Manage APE files and encode them to any key audio format supported by AVS Audio Converter . See a full list of supported audio formats.\r\n\r\nExport Audio from Video \r\nSelect and convert audio from your video files. AVS Audio Converter supports DVD, MPEG, MP4, AVI, DIVX, MOV, WMV, VOB, 3GP, RM, QT, FLV, etc. See a full list of supported video formats.\r\n\r\nConvert Files to M4B \r\nConvert your audio tracks to M4B format with AVS Audio Converter . Divide them into chapters and add bookmarks. Set up quality level before audio conversion. Prepare audio files for your iPod/iPhone.\r\n\r\nCreate Ringtone for iPhone \r\nEdit an audio file and save it to M4R format for iPhone. Make an individual ringtone with AVS Audio Converter .\r\n\r\nEdit Your Audio Files \r\nTrim, delete parts, merge files, apply effects with AVS Audio Converter . Modify extra text information in your audio files.\r\n\r\nMultilingual Support \r\nAVS Audio Converter interface and tech-support are available in English, French, German, Spanish, Italian, Japanese, Dutch and Polish.\r\n\t\t'],
+	 'link': [u'magnet:?xt=urn:btih:4b4c808fdd82ebe039e7a87ef3a30bea2b632b0e&dn=AVS+Audio+Converter+7.0.3.485+incl+crack%5BA4%5D&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:4b4c808fdd82ebe039e7a87ef3a30bea2b632b0e&dn=AVS+Audio+Converter+7.0.3.485+incl+crack%5BA4%5D&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'AVS Audio Converter 7.0.3.485 incl crack[A4] (download torrent) - TPB']}
+2012-02-10 17:12:54+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000004>
+	{'desc': [u'20 Amazing Beach Vector Illustrations Wallpapers 1280 X 1024\r\n\r\n200 JPG | 1280 X 1024 Px | 2.98 Mb\t\t'],
+	 'link': [u'magnet:?xt=urn:btih:a9b1fea3621527368771459243e39b5a90bfdcc4&dn=20+Amazing+Beach+Vector+Illustrations+Wallpapers+1280+X+1024&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:a9b1fea3621527368771459243e39b5a90bfdcc4&dn=20+Amazing+Beach+Vector+Illustrations+Wallpapers+1280+X+1024&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'20 Amazing Beach Vector Illustrations Wallpapers 1280 X 1024 (download torrent) - TPB']}
+2012-02-10 17:12:54+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000008> (referer: None)
+2012-02-10 17:12:54+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000008>
+	{'desc': [u'[img]http://img15.imageshack.us/img15/8163/greatgambler.jpg[/img]\r\n\r\n\r\n[img]http://img819.imageshack.us/img819/5598/roadies1.jpg[/img]\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n[b][size=4][color=green]MTV Roadies 9 : Everything or Nothing is the ninth season of MTV Roadies, a reality television show aired on MTV India . The auditions started on 16 September from Pune following with Audition in Kolkata , Delhi, Chandhigarh and Hyderabad. Part of the season will take place in United States of America. The show started airing on MTV India from 7th January 2012 and every new episode airs on Saturdays at 7 P.M. IST.[/color][/size][/b]\r\n\r\n\r\n\r\n\r\n\r\n[img]http://img18.imageshack.us/img18/6966/infoum.png[/img]\r\n\r\n[b][size=5][color=green]General[/color][/size][/b]\r\n\r\n[size=4][color=teal]Format                           : Flash Video\r\nFile size                        : 319 MiB\r\nDuration                         : 49mn 46s\r\nOverall bit rate                 : 896 Kbps\r\nWriting application              : Lavf53.6.0[/color][/size]\r\n\r\n[b][size=5][color=green]Video[/color][/size][/b]\r\n\r\n[size=4][color=teal]Format                           : Sorenson Spark\r\nCodec ID                         : 2\r\nDuration                         : 49mn 46s\r\nBit rate                         : 781 Kbps\r\nWidth                            : 515 pixels\r\nHeight                           : 386 pixels\r\nDisplay aspect ratio             : 4:3\r\nFrame rate mode                  : Constant\r\nFrame rate                       : 25.000 fps\r\nBit depth                        : 8 bits\r\nBits/(Pixel*Frame)               : 0.157\r\nStream size                      : 278 MiB (87%)\r\n[/color][/size]\r\n\r\n[b][size=5][color=green]Audio[/color][/size][/b]\r\n\r\n[size=4][color=teal]Format                           : MPEG Audio\r\nFormat version                   : Version 2\r\nFormat profile                   : Layer 3\r\nMode                             : Joint stereo\r\nMode extension                   : MS Stereo\r\nCodec ID                         : 2\r\nCodec ID/Hint                    : MP3\r\nDuration                         : 49mn 45s\r\nBit rate mode                    : Constant\r\nBit rate                         : 8 000 bps\r\nChannel(s)                       : 2 channels\r\nSampling rate                    : 22.05 KHz\r\nCompression mode                 : Lossy\r\nStream size                      : 2.85 MiB (1%)[/color][/size]\r\n\r\n\r\n[img]http://img231.imageshack.us/img231/3671/screenshoots.png[/img]\r\n\r\n\r\n[img]http://img43.imageshack.us/img43/7149/vlcsnap2012013120h00m14.png[/img]\r\n\r\n\r\n[img]http://img526.imageshack.us/img526/6370/vlcsnap2012013120h00m29.png[/img]\r\n\r\n\r\n[img]http://img692.imageshack.us/img692/1781/vlcsnap2012013120h00m38.png[/img]\r\n\r\n\r\n[img]http://img51.imageshack.us/img51/9379/vlcsnap2012013120h00m58.png[/img]\r\n\r\n\r\n[img]http://img197.imageshack.us/img197/2261/vlcsnap2012013120h01m15.png[/img]\r\n\r\n\r\n[img]http://img402.imageshack.us/img402/3272/vlcsnap2012013120h01m26.png[/img]\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n[b][size=5][color=red]PLEASE APPRICIATE UPLOADERS WORK BY ADDING YOUR VALUABLE COMMENTS[/color][/size][/b]\t\t'],
+	 'link': [u'magnet:?xt=urn:btih:e9e2f5ed2a82d1f3f74d48fe9cbbe206cfa0ac2a&dn=MTV+Roadies+9+-+Pune+Auditions+%5BEp+4%5D+%5BUncensored%5D+by+%21%21%21---grea&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:e9e2f5ed2a82d1f3f74d48fe9cbbe206cfa0ac2a&dn=MTV+Roadies+9+-+Pune+Auditions+%5BEp+4%5D+%5BUncensored%5D+by+%21%21%21---grea&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'MTV Roadies 9 - Pune Auditions [Ep 4] [Uncensored] by !!!---grea (download torrent) - TPB']}
+2012-02-10 17:12:55+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000009> (referer: None)
+2012-02-10 17:12:55+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000009>
+	{'desc': [u'Minato Sahashi is extremely intelligent, yet due to his inability to cope under pressure has failed the college entrance exam twice. As a result he has been branded an idiot and loser by many. One day after talking to his yet again disappointed mother he comes into contact with a girl named Musubi who was under attack. The girl runs but takes him with her and soon finds that Minato, while unknown to him, is an Ashikabi, one of the mysterious set of masters that have the genetic trait that can become partners with some of the 108 cute girls, buxom women, and bish\u253c\u252c\xecnen called "Sekirei". The reason for the partnership allows the Sekirei to use all their power to win in the competition held by the mysterious MBI corporation.\t\t'],
+	 'link': [u'magnet:?xt=urn:btih:47a16ee638e6ddf309ed6bc88bb6ab3ad4b88179&dn=Sekirei+-+BRrip+Dual+Audio+%28Season+1%29&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:47a16ee638e6ddf309ed6bc88bb6ab3ad4b88179&dn=Sekirei+-+BRrip+Dual+Audio+%28Season+1%29&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'Sekirei - BRrip Dual Audio (Season 1) (download torrent) - TPB']}
+2012-02-10 17:12:55+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000010> (referer: None)
+2012-02-10 17:12:55+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000012> (referer: None)
+2012-02-10 17:12:55+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000015> (referer: None)
+2012-02-10 17:12:55+0530 [pirate] ERROR: Spider error processing <GET http://thepiratebay.se/torrent/7000010>
+	Traceback (most recent call last):
+	  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/base.py", line 1171, in mainLoop
+	    self.runUntilCurrent()
+	  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/base.py", line 793, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 361, in callback
+	    self._startRunCallbacks(result)
+	  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 455, in _startRunCallbacks
+	    self._runCallbacks()
+	--- <exception caught here> ---
+	  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 542, in _runCallbacks
+	    current.result = callback(current.result, *args, **kw)
+	  File "torrentcrawler/spiders/pirate.py", line 26, in parse
+	    torrent['desc'] = hxs.select('//div[@class="nfo"]/pre/text()').extract()
+	  File "/Library/Python/2.7/site-packages/Scrapy-0.14.1-py2.7.egg/scrapy/selector/lxmlsel.py", line 51, in select
+	    result = self.xpathev(xpath)
+	  File "xpath.pxi", line 321, in lxml.etree.XPathElementEvaluator.__call__ (src/lxml/lxml.etree.c:117877)
+	    
+	  File "xpath.pxi", line 242, in lxml.etree._XPathEvaluatorBase._handle_result (src/lxml/lxml.etree.c:117079)
+	    
+	  File "extensions.pxi", line 546, in lxml.etree._unwrapXPathObject (src/lxml/lxml.etree.c:112539)
+	    
+	  File "extensions.pxi", line 580, in lxml.etree._createNodeSetResult (src/lxml/lxml.etree.c:112912)
+	    
+	  File "extensions.pxi", line 602, in lxml.etree._unpackNodeSetEntry (src/lxml/lxml.etree.c:113088)
+	    
+	  File "extensions.pxi", line 719, in lxml.etree._buildElementStringResult (src/lxml/lxml.etree.c:114149)
+	    
+	  File "apihelpers.pxi", line 1344, in lxml.etree.funicode (src/lxml/lxml.etree.c:21872)
+	    
+	exceptions.UnicodeDecodeError: 'utf8' codec can't decode byte 0xc3 in position 327: invalid continuation byte
+	
+2012-02-10 17:12:55+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000012>
+	{'desc': [u"The battle to find the supreme Sekirei continues. Still some of the fighters and their masters refuse to participate in the battle since losing it means to lose the Sekirei forever, and many of them actually care about their partners, while others just use them as tools. A storm is rising on the horizon, a bigger threat approaches the city and it's about to bring pain and suffering to those who love and care for their Sekireis. \r\n\r\nThis is the second season in the Sekerei series. Quality isn't quite as good as the first season, but its still pretty damn good. I hope everyone enjoys!\r\n\r\nPlease Seed!\t\t"],
+	 'link': [u'magnet:?xt=urn:btih:4f6f0caef6822045796a59b02507b3e1cea70e93&dn=Sekirei%3A+Pure+Engagement+%28Season+2%29&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:4f6f0caef6822045796a59b02507b3e1cea70e93&dn=Sekirei%3A+Pure+Engagement+%28Season+2%29&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'Sekirei: Pure Engagement (Season 2) (download torrent) - TPB']}
+2012-02-10 17:12:55+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000015>
+	{'desc': [u'IKnowThatGirl - Carrie.mp4\r\n\r\nTags: Sex, xXx, Hot\r\n\r\nScreens: \r\n ',
+	          u'\r\n ',
+	          u'\t\t'],
+	 'link': [u'magnet:?xt=urn:btih:2e3f407fded5c9c681fc8ed185c0605171eb88bc&dn=IKnowThatGirl+-+Carrie.mp4&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:2e3f407fded5c9c681fc8ed185c0605171eb88bc&dn=IKnowThatGirl+-+Carrie.mp4&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'IKnowThatGirl - Carrie.mp4 (download torrent) - TPB']}
+2012-02-10 17:12:55+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000013> (referer: None)
+2012-02-10 17:12:55+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000014> (referer: None)
+2012-02-10 17:12:55+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000011> (referer: None)
+2012-02-10 17:12:55+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000013>
+	{'desc': [u"\r\nScientist v. Prince Jammy - Big Showdown\r\nGreensleeves - #GREL 10 \r\n\r\nGreensleeves - #GREL 10 \r\n\r\nGreensleeves - #GREL 10 \r\n\r\nJah Guidance\r\n\r\nGreensleeves\r\n#GRELCD 10 \r\nGreensleeves LP #GREL 10 1980 \r\nJah Guidance LP # \r\nGreensleeves CD #GRELCD 10 \r\nRecord date : 1980\r\n\r\nAlbum style : roots, dub\r\n\r\nPlaylist :\r\nScientist - Round 1\r\nPrince Jammy - Round 2\r\nScientist - Round 3\r\nPrince Jammy - Round 4\r\nScientist - Round 5\r\nPrince Jammy - Round 6\r\nScientist - Round 7\r\nPrince Jammy - Round 8\r\nScientist - Round 9\r\nPrince Jammy - Round 10\r\n\r\nProducer : Henry Junjo Lawes\r\n\r\nEngineer : Prince Jammy & Scientist\r\n\r\nBacking Band : The Roots Radics\r\nDrums : Santa Davis\r\nBass : Flabba Holt\r\nLead Guitar : Chinna\r\nRhythm Guitar : Bo-Peep Bowen\r\nKeyboards : Gladdy Anderson & Ansel Collins\r\nPercussions : Sky Juice\r\n\r\nStudios :\r\nRecording : Channel One (Kingston, JA)\r\nMixing : King Tubby's (Kingston, JA)\r\n\r\n\r\nEnjoyyyyy and Seed .........\t\t"],
+	 'link': [u'magnet:?xt=urn:btih:3746a540b10513db026b6e10cc16513619a7a07e&dn=Scientist+v.+Prince+Jammy+-+Big+Showdown&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:3746a540b10513db026b6e10cc16513619a7a07e&dn=Scientist+v.+Prince+Jammy+-+Big+Showdown&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'Scientist v. Prince Jammy - Big Showdown (download torrent) - TPB']}
+2012-02-10 17:12:55+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000014>
+	{'desc': [u'Getting a young hungarian girl.avi\r\n\r\nAmateur, Oral, straight, teen, Hardcore, XXX, Adult\r\n\r\n640 x 480\r\n\r\n00:24:36\r\n\r\n189.06 MB \r\n\r\nScreens\r\n ',
+	          u'\r\n ',
+	          u'\t\t'],
+	 'link': [u'magnet:?xt=urn:btih:801ed0ed74cb1c64f7f47384d233267cf5a40d9e&dn=Getting+a+young+hungarian+girl.avi&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:801ed0ed74cb1c64f7f47384d233267cf5a40d9e&dn=Getting+a+young+hungarian+girl.avi&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'Getting a young hungarian girl.avi (download torrent) - TPB']}
+2012-02-10 17:12:55+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000011>
+	{'desc': [u"The Grey (2012)\r\nGenres: Action | Adventure | Drama\r\nRuntime: 117 mins       \r\nPlot Outline:\r\nIn Alaska, an oil drilling team struggle to survive after a plane crash strands them in the wild. Hunting the humans are a pack of wolves who see them as intruders.\r\n\r\nDirector: Joe Carnahan,\r\n\r\nCast:\r\n\u0393\u0393\xe9\xbc\xf3 Liam Neeson as Ottway\r\n\u0393\u0393\xe9\xbc\xf3 Dallas Roberts as Hendrick\r\n\u0393\u0393\xe9\xbc\xf3 Frank Grillo as Diaz\r\n\u0393\u0393\xe9\xbc\xf3 Dermot Mulroney as Talget\r\n\u0393\u0393\xe9\xbc\xf3 Nonso Anozie as Burke\r\n\u0393\u0393\xe9\xbc\xf3 Joe Anderson as Flannery\r\n\u0393\u0393\xe9\xbc\xf3 Ben Bray as Hernandez (as Ben Hernandez Bray)\r\n\u0393\u0393\xe9\xbc\xf3 James Badge Dale as Lewenden\r\n\u0393\u0393\xe9\xbc\xf3 Anne Openshaw as Ottway's Wife\r\n\u0393\u0393\xe9\xbc\xf3 Peter Girges as Company Clerk\r\n\r\nTrailer:\r\nThe Grey -- In Alaska, an oil drilling team struggle to survive after a plane crash strands them in the wild. Hunting the humans are a pack of wolves who see them as intruders.\r\nDescription\tIn Alaska, an oil drilling team\r\nstruggle to survive after a plane\r\ncrash strands them in the wild.\r\nHunting the humans are a pack of\r\nwolves who see them as intruders.\r\n\r\nDirector:\r\nJoe Carnahan\r\n\r\nWriters:\r\nJoe Carnahan (screenplay), Ian Mackenzie Jeffers (screenplay)\r\n\r\nStars:\r\nLiam Neeson, Dermot Mulroney and Frank Grillo\r\n\r\nEncoder: Baker92\r\n\r\nVideo:\r\nFormat: AVI ( XviD )\r\nLength: 01:53:49\r\nFrame Width: 720\r\nFrame Height: 278\r\nData Rate: 1369kbps\r\nTotal Bitrate: 1497kbps\r\nFrame Rate: 25Frames/Second\r\n\r\nAudio:\r\nFormat: MP3\r\nBirate: 128kbps\r\nChannels: 2 ( Stereo )\r\nAudio Sample Rate: 48KHz\r\n\r\nSources: VidLum1x, Audunknown ( cheers guys )\r\n\r\nNote: nice to see full audio couple\r\nfilters on the vid rgb,\r\nsaturation etc lookin\r\nnice enjoy\t\t"],
+	 'link': [u'magnet:?xt=urn:btih:e61e3239a37c757c9d3e340d3f073d22b6099512&dn=The.Grey.2012.TS.XviD-GooN.&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:e61e3239a37c757c9d3e340d3f073d22b6099512&dn=The.Grey.2012.TS.XviD-GooN.&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'The.Grey.2012.TS.XviD-GooN. (download torrent) - TPB']}
+2012-02-10 17:12:55+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000016> (referer: None)
+2012-02-10 17:12:55+0530 [pirate] ERROR: Spider error processing <GET http://thepiratebay.se/torrent/7000016>
+	Traceback (most recent call last):
+	  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/base.py", line 1171, in mainLoop
+	    self.runUntilCurrent()
+	  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/base.py", line 793, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 361, in callback
+	    self._startRunCallbacks(result)
+	  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 455, in _startRunCallbacks
+	    self._runCallbacks()
+	--- <exception caught here> ---
+	  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 542, in _runCallbacks
+	    current.result = callback(current.result, *args, **kw)
+	  File "torrentcrawler/spiders/pirate.py", line 26, in parse
+	    torrent['desc'] = hxs.select('//div[@class="nfo"]/pre/text()').extract()
+	  File "/Library/Python/2.7/site-packages/Scrapy-0.14.1-py2.7.egg/scrapy/selector/lxmlsel.py", line 51, in select
+	    result = self.xpathev(xpath)
+	  File "xpath.pxi", line 321, in lxml.etree.XPathElementEvaluator.__call__ (src/lxml/lxml.etree.c:117877)
+	    
+	  File "xpath.pxi", line 242, in lxml.etree._XPathEvaluatorBase._handle_result (src/lxml/lxml.etree.c:117079)
+	    
+	  File "extensions.pxi", line 546, in lxml.etree._unwrapXPathObject (src/lxml/lxml.etree.c:112539)
+	    
+	  File "extensions.pxi", line 580, in lxml.etree._createNodeSetResult (src/lxml/lxml.etree.c:112912)
+	    
+	  File "extensions.pxi", line 602, in lxml.etree._unpackNodeSetEntry (src/lxml/lxml.etree.c:113088)
+	    
+	  File "extensions.pxi", line 719, in lxml.etree._buildElementStringResult (src/lxml/lxml.etree.c:114149)
+	    
+	  File "apihelpers.pxi", line 1344, in lxml.etree.funicode (src/lxml/lxml.etree.c:21872)
+	    
+	exceptions.UnicodeDecodeError: 'utf8' codec can't decode byte 0xc3 in position 142: invalid continuation byte
+	
+2012-02-10 17:12:56+0530 [pirate] DEBUG: Crawled (404) <GET http://thepiratebay.se/torrent/7000019> (referer: None)
+2012-02-10 17:12:56+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000020> (referer: None)
+2012-02-10 17:12:56+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000017> (referer: None)
+2012-02-10 17:12:56+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000018> (referer: None)
+2012-02-10 17:12:56+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000020>
+	{'desc': [u' ', u' ', u'\r\n\t\t'],
+	 'link': [u'magnet:?xt=urn:btih:658324f7987ca34cbd3fb7d587198586bd5de21e&dn=BigMouthfuls.ID.bmf9312.PREAiR.XXX.720p.MP4-CuMBuCKeTS&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:658324f7987ca34cbd3fb7d587198586bd5de21e&dn=BigMouthfuls.ID.bmf9312.PREAiR.XXX.720p.MP4-CuMBuCKeTS&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'BigMouthfuls.ID.bmf9312.PREAiR.XXX.720p.MP4-CuMBuCKeTS (download torrent) - TPB']}
+2012-02-10 17:12:56+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000022> (referer: None)
+2012-02-10 17:12:56+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000023> (referer: None)
+2012-02-10 17:12:56+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000021> (referer: None)
+2012-02-10 17:12:56+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000017>
+	{'desc': [u' ', u' ', u'\r\n\t\t'],
+	 'link': [u'magnet:?xt=urn:btih:587cd9e645843609fa7f496d66160738ebd8c20a&dn=Big+Mouthfuls+-+Ashley+Sinclair+Is+Dreamy+-+SD&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:587cd9e645843609fa7f496d66160738ebd8c20a&dn=Big+Mouthfuls+-+Ashley+Sinclair+Is+Dreamy+-+SD&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'Big Mouthfuls - Ashley Sinclair Is Dreamy - SD (download torrent) - TPB']}
+2012-02-10 17:12:56+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000018>
+	{'desc': [u' ', u' ', u'\r\n\t\t'],
+	 'link': [u'magnet:?xt=urn:btih:c365a14e39b4abc2d37563230c63751cb54afd23&dn=Big+Tits+Round+Asses+-+Vicky+Vixen+-+Huge+Natural+Tits+-+SD&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:c365a14e39b4abc2d37563230c63751cb54afd23&dn=Big+Tits+Round+Asses+-+Vicky+Vixen+-+Huge+Natural+Tits+-+SD&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'Big Tits Round Asses - Vicky Vixen - Huge Natural Tits - SD (download torrent) - TPB']}
+2012-02-10 17:12:56+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000024> (referer: None)
+2012-02-10 17:12:56+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000022>
+	{'desc': [u' ', u' ', u'\r\n\t\t'],
+	 'link': [u'magnet:?xt=urn:btih:0785738f1c8a752b1e3255a9cb8e9937d69dc1ef&dn=BigTitsRoundAsses.ID.btra9616.PREAiR.READNFO.XXX.720p.MP4-SEXORS&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:0785738f1c8a752b1e3255a9cb8e9937d69dc1ef&dn=BigTitsRoundAsses.ID.btra9616.PREAiR.READNFO.XXX.720p.MP4-SEXORS&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'BigTitsRoundAsses.ID.btra9616.PREAiR.READNFO.XXX.720p.MP4-SEXORS (download torrent) - TPB']}
+2012-02-10 17:12:56+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000023>
+	{'desc': [u'El Padrino MP4 640x480 para Iphone y Android\t\t'],
+	 'link': [u'magnet:?xt=urn:btih:339fc41afd91c4ad8035e96654767a58d54b3a88&dn=El+padrino+Iphone&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:339fc41afd91c4ad8035e96654767a58d54b3a88&dn=El+padrino+Iphone&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'El padrino Iphone (download torrent) - TPB']}
+2012-02-10 17:12:56+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000021>
+	{'desc': [u'CumLouder - Noemi Jolie.mp4\r\n\r\nTags: Sex, Latina, xXx\r\n\r\nScreens:\r\n ',
+	          u'\r\n ',
+	          u'\t\t'],
+	 'link': [u'magnet:?xt=urn:btih:3cd92c9c04ba85c9f3b01d07f59fa9e8172ea459&dn=CumLouder+-+Noemi+Jolie.mp4&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:3cd92c9c04ba85c9f3b01d07f59fa9e8172ea459&dn=CumLouder+-+Noemi+Jolie.mp4&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'CumLouder - Noemi Jolie.mp4 (download torrent) - TPB']}
+2012-02-10 17:12:56+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000024>
+	{'desc': [u' ', u' ', u'\r\n\t\t'],
+	 'link': [u'magnet:?xt=urn:btih:8b72148ad200140e3ff71cd39f1a2c0da82a052a&dn=Cruelty+Party+-+Dayna+Vendetta+And+Her+Wild+Party+-+SD&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:8b72148ad200140e3ff71cd39f1a2c0da82a052a&dn=Cruelty+Party+-+Dayna+Vendetta+And+Her+Wild+Party+-+SD&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'Cruelty Party - Dayna Vendetta And Her Wild Party - SD (download torrent) - TPB']}
+2012-02-10 17:12:56+0530 [pirate] DEBUG: Crawled (404) <GET http://thepiratebay.se/torrent/7000025> (referer: None)
+2012-02-10 17:12:56+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000026> (referer: None)
+2012-02-10 17:12:56+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000026>
+	{'desc': [u'60 Beautiful Architecture Wallpapers 1280 X 1024 [Set 1]\r\n\r\n60 JPG | 1280 X 1024 Px | 75.5 Mb\t\t'],
+	 'link': [u'magnet:?xt=urn:btih:810790d2d2572331702c92f8b021758381b2fc87&dn=60+Beautiful+Architecture+Wallpapers+1280+X+1024+%5BSet+1%5D&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:810790d2d2572331702c92f8b021758381b2fc87&dn=60+Beautiful+Architecture+Wallpapers+1280+X+1024+%5BSet+1%5D&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'60 Beautiful Architecture Wallpapers 1280 X 1024 [Set 1] (download torrent) - TPB']}
+2012-02-10 17:12:56+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000027> (referer: None)
+2012-02-10 17:12:57+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000027>
+	{'desc': [u' ', u' ', u'\r\n\t\t'],
+	 'link': [u'magnet:?xt=urn:btih:3edea8734e530338b8e26e82653faa28f144cfa4&dn=Naughty+Athletics+-+Brooklyn+Lee+-+SD&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:3edea8734e530338b8e26e82653faa28f144cfa4&dn=Naughty+Athletics+-+Brooklyn+Lee+-+SD&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'Naughty Athletics - Brooklyn Lee - SD (download torrent) - TPB']}
+2012-02-10 17:12:57+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000028> (referer: None)
+2012-02-10 17:12:57+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000028>
+	{'desc': [u'El lado oscuro de Gandhi\r\nToteKing\t\t'],
+	 'link': [u'magnet:?xt=urn:btih:fc428907460a79b5e7d702206a2dfa24170f63a0&dn=Tote+King_El+lado+oscuro+de+Gandhi&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:fc428907460a79b5e7d702206a2dfa24170f63a0&dn=Tote+King_El+lado+oscuro+de+Gandhi&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'Tote King_El lado oscuro de Gandhi (download torrent) - TPB']}
+2012-02-10 17:12:57+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000030> (referer: None)
+2012-02-10 17:12:57+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000032> (referer: None)
+2012-02-10 17:12:57+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000030>
+	{'desc': [u' ', u' ', u'\r\n\t\t'],
+	 'link': [u'magnet:?xt=urn:btih:2039498cbcee3d9d982187a2d11a9b08a62b238b&dn=Party+Of+Three+-+Lesbian+Strap+On+Sex+-+SD&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:2039498cbcee3d9d982187a2d11a9b08a62b238b&dn=Party+Of+Three+-+Lesbian+Strap+On+Sex+-+SD&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'Party Of Three - Lesbian Strap On Sex - SD (download torrent) - TPB']}
+2012-02-10 17:12:57+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000031> (referer: None)
+2012-02-10 17:12:57+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000032>
+	{'desc': [u' ', u' ', u'\r\n\t\t'],
+	 'link': [u'magnet:?xt=urn:btih:f1c09b463f2bf2e8e29a12faa275601b5fdef175&dn=Pervs+On+Patrol+-+Kari+Sweet+-+Czeching+Out+Her+Ass%21+-+SD&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:f1c09b463f2bf2e8e29a12faa275601b5fdef175&dn=Pervs+On+Patrol+-+Kari+Sweet+-+Czeching+Out+Her+Ass%21+-+SD&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'Pervs On Patrol - Kari Sweet - Czeching Out Her Ass! - SD (download torrent) - TPB']}
+2012-02-10 17:12:57+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000031>
+	{'desc': [u"\r\n                        \r\n                           DJ LEAK\r\n\r\n\r\n\r\n                  P - R - E - S - E - N - T - S\r\n\r\n                      VA-01-30-12 Djleak.Com Hip-Hop-Rnb Singles\r\n\r\n     ARTiST..: VA\r\n     ALBUM...: 01-30-12 Djleak.Com Hip-Hop-Rnb Singles\r\n     LABEL...: n/a\r\n     GENRE...: Unknown\r\n     TRACKS..: 15\r\n     MODE....: Joint-Stereo\r\n     BiTRATE.: VBRkbps\r\n     ENCODER.: Web\r\n     SOURCE..: CDDA\r\n     GRABBER.:\r\n     RiPDATE.: Jan-31-2012\r\n     STREET..: 000-00-0000\r\n\r\n\r\n\r\n\r\n              T - R - A - C - K - L - I - S - T\r\n\r\n\r\n\r\n\r\n   01 -Lil Wayne-That's What They Call Me (Cdq)  [03:15]\r\n   02 -Meek Mill-Stay Schemin (Freestyle) Radio  [04:36]\r\n   03 -Yelawolf-I Do Freestyle [tags]            [02:50]\r\n   04 -Young Fame Ft 2 Chainz-Make it Work       [03:58]\r\n   05 -Olivia & Fred the Godson-Freshy           [03:47]\r\n   06 -N.O.R.E. Ft Action Bronson-Mazel Tov      [04:31]\r\n   07 -Snoop Dogg-Cosmic Kev (Freestyle)         [04:29]\r\n   08 -Snoop Dogg Ft Bob Sinclar-Wild Thing      [04:57]\r\n   09 -Stige-Pretty Flacko Freestyle             [03:20]\r\n   10 -Ransom-Rich+forever+freestyle             [03:14]\r\n   11 -Test+me-Maserati                          [03:38]\r\n   12 -David Guetta-Touch & Go                   [04:16]\r\n       (Feat. Niles Mason)\r\n   13 -Saigon-East Village Radio (Freestyle)     [14:10]\r\n   14 -Sean Paul-Put it on You                   [03:40]\r\n   15 -Sean Paul-Won't Stop (Turn Me Out)        [04:19]\r\n\r\n\r\n\r\n                                            Time:[69:00]min\r\n                                            Size:[107,1]MB\r\n\r\n\r\n\r\nReleasenotes:\r\n ",
+	          u'\t\t'],
+	 'link': [u'magnet:?xt=urn:btih:05bb4c60456ecb4e5f11955a9434fc25ea5d6fb2&dn=VA-01-30-12_Djleak.Com_Hip-Hop-Rnb_Singles-2012-DjLeak&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:05bb4c60456ecb4e5f11955a9434fc25ea5d6fb2&dn=VA-01-30-12_Djleak.Com_Hip-Hop-Rnb_Singles-2012-DjLeak&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'VA-01-30-12_Djleak.Com_Hip-Hop-Rnb_Singles-2012-DjLeak (download torrent) - TPB']}
+2012-02-10 17:12:57+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000029> (referer: None)
+2012-02-10 17:12:57+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000029>
+	{'desc': [u'. \r\n ',
+	          u'          :     Once & For all ;)\r\n\r\n\r\n               www . Torrenting . Com \r\n\r\n(((((((((((((= Enjoy No RAR releases =))))))))))))))))))))\r\n\r\n\r\n...................................NFO:....................................\r\n\r\n.[IMG]http://i.imgur.com/2mcr9.png[/IMG]\r\n\r\n \r\nTITLE: \r\n\r\nThe Grey 2012 TS READNFO XViD - INSPiRAL\r\n\r\nIMDB: \r\n ',
+	          u"\r\n\r\n\r\nSOURCES:\r\n\r\nVIDEO - Lum1x and youtube THANKS\r\nAUDIO - lum1x and unknown THANKS\r\nSUBS  - None Add\r\n\r\nSTATS:\r\n\r\nVideo\r\nID                               : 0\r\nFormat                           : MPEG-4 Visual\r\nFormat profile                   : Advanced Simple@L5\r\nFormat settings, BVOP            : 2\r\nFormat settings, QPel            : No\r\nFormat settings, GMC             : No warppoints\r\nFormat settings, Matrix          : Default (MPEG)\r\nMuxing mode                      : Packed bitstream\r\nCodec ID                         : XVID\r\nCodec ID/Hint                    : XviD\r\nDuration                         : 1h 50mn\r\nBit rate                         : 1 656 Kbps\r\nWidth                            : 720 pixels\r\nHeight                           : 256 pixels\r\nDisplay aspect ratio             : 2.813\r\nFrame rate                       : 25.000 fps\r\nColor space                      : YUV\r\nChroma subsampling               : 4:2:0\r\nBit depth                        : 8 bits\r\nScan type                        : Progressive\r\nCompression mode                 : Lossy\r\nBits/(Pixel*Frame)               : 0.359\r\nStream size                      : 1.28 GiB (92%)\r\nWriting library                  : XviD 64\r\n\r\nAudio\r\nID                               : 1\r\nFormat                           : MPEG Audio\r\nFormat version                   : Version 1\r\nFormat profile                   : Layer 3\r\nMode                             : Joint stereo\r\nMode extension                   : MS Stereo\r\nCodec ID                         : 55\r\nCodec ID/Hint                    : MP3\r\nDuration                         : 1h 50mn\r\nBit rate mode                    : Constant\r\nBit rate                         : 128 Kbps\r\nChannel(s)                       : 2 channels\r\nSampling rate                    : 44.1 KHz\r\nCompression mode                 : Lossy\r\nStream size                      : 101 MiB (7%)\r\nAlignment                        : Split accross interleaves\r\nInterleave, duration             : 40 ms (1.00 video frame)\r\nInterleave, preload duration     : 500 ms\r\n\r\n\r\nNOTES:\r\n\r\nKK sources used,same russian video but this time round line audio added from unknowns rip :)\r\n\r\nRight first stripped unknowns line and went to remux over my encode of the russian video but came across several issues.\r\nFirstly there was 36 secs roughly missing off the intro,1min 8 secs overlap 3/4 into the film,5.5 secs missing several mins later\r\nand the after scene was repeated at the end ....\r\nSo bascially had to go through and add the intro audio off the russian cam ,remove the min overlap and cut where the russian video\r\nended......\r\nFrom there i grabbed the after scene credit from youtube and added the audio off it to make a complete audio file that would fit\r\nover my rip.\r\nAlso cleaned the audio up in adobe using a hiss removal filter aswell as changing the EQ bands.\r\n\r\nThe video i cleaned the russian video up,changed the res ....yes it looks really thin now,but due to movement in the original russian files\r\nthe AR does change slightly throughout,so i opted to pic a res i thought looked best.\r\nAlso changed all the brightness,contrast,rgb eq,chroma,sharpness you name it :lol: .\r\nFrom there i took the youtube clip ,levelled it up and filtered that aswell and appended to my encode.\r\n\r\nReadnfo ...well basically just to say yes the runtime is different to unknowns but i removed all the black screen with credit music as i didn't\r\nsee the point,but each to their own ....but now this encode as no video overlap and full intro and the end scene after the credits .\r\nEnjoy :)\r\n\r\nOh ps .....\r\nafter i upped here ,i'm going to upload it to public sites so the mpaa can get my ip,but i'm a dumbass LMFAO ...:slap:\r\nM100 get a grip bro FFS :lol:\r\nDon't know whats worse M100 with public uploading or Zombie with twatbook and twatter ....you guys crack me up :lol:\r\n\r\n\r\nSCREENS:\r\n\r\n[IMG]http://i.imgur.com/TGggp.png[/IMG]\r\n[IMG]http://i.imgur.com/H2PLK.png[/IMG]\r\n[IMG]http://i.imgur.com/VCyqr.png[/IMG]\r\n[IMG]http://i.imgur.com/Y2QtP.png[/IMG]\r\n[IMG]http://i.imgur.com/lw8Lk.png[/IMG]\r\n[IMG]http://i.imgur.com/D9iGY.png[/IMG]\r\n[IMG]http://i.imgur.com/TrUU3.png[/IMG]\r\n\r\n\r\nGREETZ: \r\n\r\nPast,Present and Future\r\n\r\n[IMG]http://i.imgur.com/2mcr9.png[/IMG]\t\t"],
+	 'link': [u'magnet:?xt=urn:btih:cb786791ad11f5908cf568e216bda42f899b4f08&dn=The+Grey+2012+TS+READNFO+XViD+-+INSPiRAL&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:cb786791ad11f5908cf568e216bda42f899b4f08&dn=The+Grey+2012+TS+READNFO+XViD+-+INSPiRAL&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'The Grey 2012 TS READNFO XViD - INSPiRAL (download torrent) - TPB']}
+2012-02-10 17:12:57+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000033> (referer: None)
+2012-02-10 17:12:57+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000034> (referer: None)
+2012-02-10 17:12:57+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000035> (referer: None)
+2012-02-10 17:12:57+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000033>
+	{'desc': [u' ', u' ', u'\r\n\t\t'],
+	 'link': [u'magnet:?xt=urn:btih:8ff9d85cd875fdeabc20cd89958432ef6c257ec8&dn=Pornstar+Spa+-+Tiffany+D+Gore+-+Porn+Star+Massage+Sex+-+SD&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:8ff9d85cd875fdeabc20cd89958432ef6c257ec8&dn=Pornstar+Spa+-+Tiffany+D+Gore+-+Porn+Star+Massage+Sex+-+SD&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'Pornstar Spa - Tiffany D Gore - Porn Star Massage Sex - SD (download torrent) - TPB']}
+2012-02-10 17:12:57+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000034>
+	{'desc': [u' ', u' ', u'\r\n\t\t'],
+	 'link': [u'magnet:?xt=urn:btih:1c1470beeb85cdcd0ee3013b9bdb79eb3a9a490f&dn=Shes+A+Freak+-+Ashli+Ames+-+Dildo+Love+-+SD&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:1c1470beeb85cdcd0ee3013b9bdb79eb3a9a490f&dn=Shes+A+Freak+-+Ashli+Ames+-+Dildo+Love+-+SD&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'Shes A Freak - Ashli Ames - Dildo Love - SD (download torrent) - TPB']}
+2012-02-10 17:12:57+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000035>
+	{'desc': [u'IMDB Info\r\nTitle Billy T: Te Movie (2011) Go to IMDB\r\nRelease Date 2011-08-18\r\nRating\r\n\r\n7.8 (19 votes)\r\nGenres Documentary, Comedy\r\nCast Summary Billy T. James, Judy Bailey, Jeff Bennet, Barry Crump\r\nRuntime 1 hour, 29 minutes\r\nPlot Outline Cinema documentary feature celebrating iconic New Zealand entertainer, Billy T James.\r\n\r\nTitle: Billy T: Te Movie\r\nRls Name: Billy.T.Te.Movie.2011.DVDRip.XviD-FiHViD\r\nYear: 2011\r\nGenre: Comedy/Documentary\r\nBitrate: 1028 kbps\r\nRes: 640 x 352 (25fps)\r\nAudio Codec: mp3 ABR\r\nAudio Bitrate: 152 avg\r\nChannels: 2\r\nSampling Rate: 48 kHz\r\nLanguage: English\r\nRuntime: 1hr 22mins\r\nSubtitle: None\r\nRetail Date: 7th Dec 2011\r\nPre Date: 29th Jan 2012\r\nLink: http://www.imdb.com/title/tt1992089/\r\n\r\nDescription:\r\nDocumentary celebrating the life of legendary\r\nNew Zealand comedian, Billy T James. Directed\r\nby Ian Mune (Came A Hot Friday).\r\n\r\nThe film explores Billy?s extraordinary talent\r\nas musician, singer, comedian, actor, writer\r\nand artist (and even attempts to uncover the\r\nsource of his trademark giggle). The film tells\r\nof Billy?s meteoric rise to national fame and\r\nhis tragic downfall into ill-health and financial\r\ncollapse.\r\n\r\nFeaturing digitally re-mastered footage of Billy?s\r\nperformances and never-seen-before archival images,\r\nBilly T?s story is set alongside interviews with\r\nhis family, friends and colleagues.\r\n\r\nNotes: Contains footage in 4:3\r\n\r\nGo Buy the DVD, WE DID!\t\t'],
+	 'link': [u'magnet:?xt=urn:btih:278c189dcef3b52a880651710ac28b625efbab22&dn=Billy.T.Te.Movie.2011.DVDRip.XviD-FiHViD.&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:278c189dcef3b52a880651710ac28b625efbab22&dn=Billy.T.Te.Movie.2011.DVDRip.XviD-FiHViD.&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'Billy.T.Te.Movie.2011.DVDRip.XviD-FiHViD. (download torrent) - TPB']}
+2012-02-10 17:12:57+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000036> (referer: None)
+2012-02-10 17:12:57+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000036>
+	{'desc': [u'Share My Cock 3 DvdRip.avi\r\n\r\nTags: Sex, xXx, Hot\r\n\r\nScreens:\r\n ',
+	          u'\r\n ',
+	          u'\t\t'],
+	 'link': [u'magnet:?xt=urn:btih:ef293fcaf780c2567cb07f7041596eeb4c4e0285&dn=Share+My+Cock+3+DvdRip.avi&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:ef293fcaf780c2567cb07f7041596eeb4c4e0285&dn=Share+My+Cock+3+DvdRip.avi&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'Share My Cock 3 DvdRip.avi (download torrent) - TPB']}
+2012-02-10 17:12:58+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000039> (referer: None)
+2012-02-10 17:12:58+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000039>
+	{'desc': [u'ScreenCap Gallery:\r\n ', u'\t\t'],
+	 'link': [u'magnet:?xt=urn:btih:c2a377dfd1403cd44ed775730a3145706d1800d1&dn=Hot+Blonde+Get+GangBanged+Hard&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:c2a377dfd1403cd44ed775730a3145706d1800d1&dn=Hot+Blonde+Get+GangBanged+Hard&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'Hot Blonde Get GangBanged Hard (download torrent) - TPB']}
+2012-02-10 17:12:58+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000038> (referer: None)
+2012-02-10 17:12:58+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000038>
+	{'desc': [u'Torrent: LUNDIN.OCH.OETTERLI-200EXPRESSTIPS.FOR.ATT.MA.BRA.2008.Svensk.Ljudbok-Mr_KeFF\r\n\r\nOrginal-titel: 200 expresstips f\xf6r att m\xe5 bra (av Else-Marie Lundin, Lena Oetterli)\r\n\r\nUppl\xe4sare: Lena Oetterli\r\n\r\n2 CD  (ca 2 timmar)\r\n\r\nHandling:\r\nV\xe4gen till ett b\xe4ttre liv - H\xe4r f\xe5r du knepen!\r\n\r\n\r\nFriskv\xe5rdsterapeuten Lena Oetterli och journalisten Else-Marie Lundin, b\xe5da k\xe4nda fr\xe5n Expressen, visar i 200 Expresstips f\xf6r att m\xe5 bra v\xe4gen till ett harmoniskt och mer v\xe4lm\xe5ende liv. Bokens tips \xe4r uppdelade efter \xe5rstiderna, och vi f\xe5r bl. a. l\xe4ra oss hur vi med enkla medel\r\n\r\n\r\n- h\xe4rdar immunf\xf6rsvaret\r\n\r\n- kommer i form till sommaren\r\n\r\n- tacklar h\xf6stdepressionen\r\n\r\n- snuvar tidstjuven\r\n\r\n- hittar sj\xe4lvf\xf6rtroendet\r\n\r\n\r\nH\xe4r finns n\xe5got f\xf6r alla! Tipsen g\xe5r l\xe4tt att anpassa till det dagliga schemat. Vad s\xe4gs till exempel om att ta ett promenadm\xf6te en dag d\xe5 solen skiner? \r\n\r\n\r\n------------------------------------------------------------\r\n\r\n Audio\r\n Format                          : MPEG Audio\r\nFormat_Version                   : Version 1\r\nFormat_Profile                   : Layer 3\r\n Bitrate                         : 128 Kbps\r\n Kanal(er)                       : 1 kanal\r\n Samplingstakt                   : 44,1 KHz\r\nStreamSize/String                : 2,99 MiB (100%)\r\n Skrivande bibliotek             : LAME3.82\r\n\r\n\r\n\r\n##############################################################################\r\n##############################################################################\r\n##                                                                          ##\r\n##             ##    ##            ##  ##   ####   ######  ######           ##\r\n##             ########  ## ###    ## #    ##  ##  ##      ##               ##\r\n##             ## #  ##  ###  ##   ###     ######  ####    ####             ##\r\n##             ##    ##  ##        ###     ##      ##      ##               ##\r\n##             ##    ##  ##        ## #    ##  ##  ##      ##               ##\r\n##             ##    ##  ##        ##  ##   ####   ##      ##               ##\r\n##                                                                          ##\r\n##                                                                          ##\r\n##############################################################################\r\n##############################################################################\r\n\r\nBes\xf6k mej p\xe5:  ',
+	          u' \r\n\r\n------------------------------------------------------------------------------\r\n\r\nFlera uppladdningar fr\xe5n mej ser ni h\xe4r:\r\n ',
+	          u'\r\n\r\n\r\nSpeciella h\xe4lsningar till: spyro, Scratzz, SPICEFREAK, anoXmous, CrilleKex, martin_edguy, Haggebulle, Moonlight, Magic.\r\n\r\n\r\n\r\nSEEDA EFTER ER..\t\t'],
+	 'link': [u'magnet:?xt=urn:btih:753727b2e558859642558bfc5ed58dfea64d0a1b&dn=LUNDIN.OCH.OETTERLI-200EXPRESSTIPS.FOR.ATT.MA.BRA.2008.Svensk.Lj&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:753727b2e558859642558bfc5ed58dfea64d0a1b&dn=LUNDIN.OCH.OETTERLI-200EXPRESSTIPS.FOR.ATT.MA.BRA.2008.Svensk.Lj&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'LUNDIN.OCH.OETTERLI-200EXPRESSTIPS.FOR.ATT.MA.BRA.2008.Svensk.Lj (download torrent) - TPB']}
+2012-02-10 17:12:58+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000040> (referer: None)
+2012-02-10 17:12:58+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000040>
+	{'desc': [u'DVD4 includes the final slices of the North & South American East Coasts + Eastern Europe and the West Coast of Africa\t\t'],
+	 'link': [u'magnet:?xt=urn:btih:37252f541806491199522f02f811fa848d7b381a&dn=X-Plane+10+DVD+4&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:37252f541806491199522f02f811fa848d7b381a&dn=X-Plane+10+DVD+4&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'X-Plane 10 DVD 4 (download torrent) - TPB']}
+2012-02-10 17:12:58+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000037> (referer: None)
+2012-02-10 17:12:58+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000037>
+	{'desc': [u'\r\n\r\nPOtHS\r\nPouring Out the Holy Spiritruth\r\n\r\n\r\nPOtHS - Walt Disney 69 Movies - 1977 thru 1988\r\n\r\n\r\n\r\n\r\nBefore and After Photos of Walt Disney upon receiving his Crown and Keys to The Royal Kingdom of The Illuminated One\r\n\r\n \r\n\r\n\r\n\r\n\r\nPOtHS - Walt Disney 69 Movies - 1977 thru 1988[/center]\r\n\r\n\r\nPOtHS Comment: This man was a 33rd degree Freemason and Participating member of The Bohemian Grove, which is run by Californian Republicans for 2 weeks vacations in the "Grove" for "The Elite" or "Illuminati" of this World.\r\n\r\nDescription:\r\n\r\nWalt Disney - Information on The Real Walt Disney To come in Future Torrents.\r\n\r\nThis includes\r\n\r\nNext is\r\n\r\n1977 - The Many Adventures of Winnie the Pooh\r\n1977 - The Rescuers\r\n1981 - The Fox and the Hound\r\n1982 - A Disney Christmas Gift\r\n1985 - The Black Cauldron\r\n1986 - The Great Mouse Detective\r\n1988 - Oliver & Company\r\n\r\nAfter that is this\r\n\r\n1988 - Who Framed Roger Rabbit\r\n1989 - The Little Mermaid\r\n1990 - Ducktales The Movie - Treasure of the Lost Lamp\r\n1990 - The Rescuers Down Under\r\n1991 - Beauty and the Beast\r\n1993 - The Nightmare Before Christmas\r\n1994 - Aladdin -The Return of Jafar\r\n\r\nOnly 13 More to go\r\n\r\n\r\nRAPtURE (My transportation outta here).\r\n\r\nThe Blessed Hope.  If you believe in The Rapture you better believe The Above Statement and that the Sacrificed Blood of Jesus, on the Cross paid for your sins and there is NOTHING Else you can do to gain Salvation, The GRACE of Christ did it ALL. Now you just have to believe that with all your Heart, Mind and Soul or Maybe Get Left Behind. All PAST, Present and Future Sins are Forgiven with Jesus. (I wouldn\'t PUSH That Future sin statement to much!!!)\r\n\r\nIn a moment, in the twinkling of an eye, at the last trump: for the trumpet shall sound, and the dead shall be raised incorruptible, and we shall be changed...\r\n\r\n"And He will send forth His angels with A GREAT TRUMPET and THEY WILL GATHER TOGETHER His elect from the four winds, from one end of the sky to the other.\r\n\r\n"Do not marvel at this; for an hour is coming, in which all who are in the tombs will hear His voice,  Then we who are alive and remain will be caught up together with them in the clouds to meet the Lord in The Air, and there we will be forever be with him...hmmm sounds like some of us might be Immortal. (Ask your preacher about that)\r\n\r\nMore Torrents in this series atALL TORRENTS are RELEASED here FIRST!!! The First down loaders of my torrents get the Main Hookups on my SERVER. This will get lightning fast downloads, FOR FREE. (The High Speed download wholesalers are going to hate me)I upload to OVER 13 Torrent sites and this site is uploaded 1st.\r\n\r\n\r\nMay Yahweh Bless You as He has me. Seed long and Prosper from the Blessings of our Lord. I have asked the Father to Bless all those that Seed Long.  \r\n\r\nDo Not believe anything you find here, search the Scriptures daily to determine the TRUTH.  Other Torrents in this Series at\r\n\r \r\n\r\nGet info on the Take Over by The New World Order Below\r\n ',
+	          u'                                                       Free online Bible Study ',
+	          u'                                                            End Times Prophecy - Who is Babylon the Great ',
+	          u'                                                            Pastueur Carl Gallops\r                                                                                Listen to Alex Jones   Secular Truth ',
+	          u'                                                                               Daily Bible Study in Your Email ',
+	          u'                                                                         Chuck Missler - Africa ',
+	          u'                                                       Chuck Missler - USA ',
+	          u'                                       Dehydrated Survival Food -  Excellent Taste ',
+	          u'          Chuck Missler - New Zealand, Australia, Pacific Rim\r\n \r\n\r\n \r\nSeed long and Prosper with Blessings from our Father. I have prayed to The Father, Bless all that Seed Long. (I have 4 year old active seeds out there, must be working for some folks!)\r\n\r\nEphesians 5:11\r\n11 And have no fellowship with the unfruitful works of darkness, but rather reprove (expose) them.\r\n\r\n      (thankyou) :thankyou:    (thankyou) :thankyou:     Thank You JESUS    \r\n\r\n\r\n\r\n\r\nBefore and After Photos of Walt Disney upon receiving his Crown and Keys to The Royal Kingdom of The Illuminated One\r\n\r\n \r\n\t\t'],
+	 'link': [u'magnet:?xt=urn:btih:ddb2ecd3f70ba71fd8592089ed73ddab82cf6153&dn=POtHS+-+Walt+Disney+69+Movies+-+1977+thru+1988&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:ddb2ecd3f70ba71fd8592089ed73ddab82cf6153&dn=POtHS+-+Walt+Disney+69+Movies+-+1977+thru+1988&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'POtHS - Walt Disney 69 Movies - 1977 thru 1988 (download torrent) - TPB']}
+2012-02-10 17:12:58+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000041> (referer: None)
+2012-02-10 17:12:58+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000041>
+	{'desc': [u'Pro Amateur 10 DvdRip.avi\r\n\r\nTags: Sex, xxx, Amateurs\r\n\r\nScreens:\r\n ',
+	          u'\r\n ',
+	          u'\t\t'],
+	 'link': [u'magnet:?xt=urn:btih:89d07d8ad057b53c6b8e0abe210769faa681547e&dn=Pro+Amateur+10+DvdRip.avi&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:89d07d8ad057b53c6b8e0abe210769faa681547e&dn=Pro+Amateur+10+DvdRip.avi&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'Pro Amateur 10 DvdRip.avi (download torrent) - TPB']}
+2012-02-10 17:12:58+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000043> (referer: None)
+2012-02-10 17:12:58+0530 [pirate] DEBUG: Crawled (404) <GET http://thepiratebay.se/torrent/7000044> (referer: None)
+2012-02-10 17:12:58+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000043>
+	{'desc': [u'18virginsex - Kelly [1080p].wmv\r\n\r\n2012, Legal Teen, Threesome, Hardcore, All Sex, HD, XXX, Adult\r\n\r\n1920 x 1080\r\n\r\n00:21:15\r\n\r\n1.25 GB\r\n\r\nScreens\r\n ',
+	          u'\r\n ',
+	          u'\t\t'],
+	 'link': [u'magnet:?xt=urn:btih:8482d81c576606a9088473bed53a7d7ebbe316ce&dn=18virginsex+-+Kelly+%5B1080p%5D.wmv&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:8482d81c576606a9088473bed53a7d7ebbe316ce&dn=18virginsex+-+Kelly+%5B1080p%5D.wmv&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'18virginsex - Kelly [1080p].wmv (download torrent) - TPB']}
+2012-02-10 17:12:58+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000042> (referer: None)
+2012-02-10 17:12:59+0530 [pirate] ERROR: Spider error processing <GET http://thepiratebay.se/torrent/7000042>
+	Traceback (most recent call last):
+	  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/base.py", line 1171, in mainLoop
+	    self.runUntilCurrent()
+	  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/base.py", line 793, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 361, in callback
+	    self._startRunCallbacks(result)
+	  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 455, in _startRunCallbacks
+	    self._runCallbacks()
+	--- <exception caught here> ---
+	  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 542, in _runCallbacks
+	    current.result = callback(current.result, *args, **kw)
+	  File "torrentcrawler/spiders/pirate.py", line 26, in parse
+	    torrent['desc'] = hxs.select('//div[@class="nfo"]/pre/text()').extract()
+	  File "/Library/Python/2.7/site-packages/Scrapy-0.14.1-py2.7.egg/scrapy/selector/lxmlsel.py", line 51, in select
+	    result = self.xpathev(xpath)
+	  File "xpath.pxi", line 321, in lxml.etree.XPathElementEvaluator.__call__ (src/lxml/lxml.etree.c:117877)
+	    
+	  File "xpath.pxi", line 242, in lxml.etree._XPathEvaluatorBase._handle_result (src/lxml/lxml.etree.c:117079)
+	    
+	  File "extensions.pxi", line 546, in lxml.etree._unwrapXPathObject (src/lxml/lxml.etree.c:112539)
+	    
+	  File "extensions.pxi", line 580, in lxml.etree._createNodeSetResult (src/lxml/lxml.etree.c:112912)
+	    
+	  File "extensions.pxi", line 602, in lxml.etree._unpackNodeSetEntry (src/lxml/lxml.etree.c:113088)
+	    
+	  File "extensions.pxi", line 719, in lxml.etree._buildElementStringResult (src/lxml/lxml.etree.c:114149)
+	    
+	  File "apihelpers.pxi", line 1344, in lxml.etree.funicode (src/lxml/lxml.etree.c:21872)
+	    
+	exceptions.UnicodeDecodeError: 'utf8' codec can't decode byte 0xc3 in position 15: invalid continuation byte
+	
+2012-02-10 17:12:59+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000046> (referer: None)
+2012-02-10 17:12:59+0530 [pirate] DEBUG: Crawled (404) <GET http://thepiratebay.se/torrent/7000045> (referer: None)
+2012-02-10 17:12:59+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000047> (referer: None)
+2012-02-10 17:12:59+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000046>
+	{'desc': [u'TonightsGirlfriend - Lisa Ann.mp4\r\n\r\nTags: Sex, xXx, Hot\r\n\r\nScreens:\r\n ',
+	          u'\r\n ',
+	          u'\t\t'],
+	 'link': [u'magnet:?xt=urn:btih:187e4e24488336ccd8873e1486fcdb32ef6631a8&dn=TonightsGirlfriend+-+Lisa+Ann.mp4&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:187e4e24488336ccd8873e1486fcdb32ef6631a8&dn=TonightsGirlfriend+-+Lisa+Ann.mp4&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'TonightsGirlfriend - Lisa Ann.mp4 (download torrent) - TPB']}
+2012-02-10 17:12:59+0530 [pirate] ERROR: Spider error processing <GET http://thepiratebay.se/torrent/7000047>
+	Traceback (most recent call last):
+	  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/base.py", line 1171, in mainLoop
+	    self.runUntilCurrent()
+	  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/base.py", line 793, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 361, in callback
+	    self._startRunCallbacks(result)
+	  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 455, in _startRunCallbacks
+	    self._runCallbacks()
+	--- <exception caught here> ---
+	  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 542, in _runCallbacks
+	    current.result = callback(current.result, *args, **kw)
+	  File "torrentcrawler/spiders/pirate.py", line 26, in parse
+	    torrent['desc'] = hxs.select('//div[@class="nfo"]/pre/text()').extract()
+	  File "/Library/Python/2.7/site-packages/Scrapy-0.14.1-py2.7.egg/scrapy/selector/lxmlsel.py", line 51, in select
+	    result = self.xpathev(xpath)
+	  File "xpath.pxi", line 321, in lxml.etree.XPathElementEvaluator.__call__ (src/lxml/lxml.etree.c:117877)
+	    
+	  File "xpath.pxi", line 242, in lxml.etree._XPathEvaluatorBase._handle_result (src/lxml/lxml.etree.c:117079)
+	    
+	  File "extensions.pxi", line 546, in lxml.etree._unwrapXPathObject (src/lxml/lxml.etree.c:112539)
+	    
+	  File "extensions.pxi", line 580, in lxml.etree._createNodeSetResult (src/lxml/lxml.etree.c:112912)
+	    
+	  File "extensions.pxi", line 602, in lxml.etree._unpackNodeSetEntry (src/lxml/lxml.etree.c:113088)
+	    
+	  File "extensions.pxi", line 719, in lxml.etree._buildElementStringResult (src/lxml/lxml.etree.c:114149)
+	    
+	  File "apihelpers.pxi", line 1344, in lxml.etree.funicode (src/lxml/lxml.etree.c:21872)
+	    
+	exceptions.UnicodeDecodeError: 'utf8' codec can't decode byte 0xc4 in position 411: invalid continuation byte
+	
+2012-02-10 17:12:59+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000048> (referer: None)
+2012-02-10 17:12:59+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000048>
+	{'desc': [u'General\r\n\r\n\r\nComplete name                            : Courageous 2011 DVDRIP XVID AC3 - Xtreme Encode.avi\r\nFormat                                   : AVI\r\nFormat/Info                              : Audio Video Interleave\r\nFormat profile                           : OpenDML\r\nFormat settings                          : rec\r\nFile size                                : 1.45 GiB\r\nDuration                                 : 2h 4mn\r\nOverall bit rate                         : 1 673 Kbps\r\n\r\n\r\n\r\n\r\n\r\nVideo\r\n\r\n\r\nID                                       : 0\r\nFormat                                   : MPEG-4 Visual\r\nFormat profile                           : Advanced Simple@L5\r\nFormat settings, BVOP                    : 1\r\nFormat settings, QPel                    : No\r\nFormat settings, GMC                     : No warppoints\r\nFormat settings, Matrix                  : Default (H.263)\r\nCodec ID                                 : XVID\r\nCodec ID/Hint                            : XviD\r\nDuration                                 : 2h 4mn\r\nBit rate                                 : 1 219 Kbps\r\nWidth                                    : 720 pixels\r\nHeight                                   : 304 pixels\r\nDisplay aspect ratio                     : 2.35:1\r\nFrame rate                               : 25.000 fps\r\nColor space                              : YUV\r\nChroma subsampling                       : 4:2:0\r\nBit depth                                : 8 bits\r\nScan type                                : Progressive\r\nCompression mode                         : Lossy\r\nBits/(Pixel*Frame)                       : 0.223\r\nStream size                              : 1.06 GiB (73%)\r\n\r\n\r\n\r\n\r\nAudio\r\n\r\n\r\nID                                       : 1\r\nFormat                                   : AC-3\r\nFormat/Info                              : Audio Coding 3\r\nMode extension                           : CM (complete main)\r\nCodec ID                                 : 2000\r\nDuration                                 : 2h 4mn\r\nBit rate mode                            : Constant\r\nBit rate                                 : 448 Kbps\r\nChannel(s)                               : 6 channels\r\nChannel positions                        : Front: L C R, Side: L R, LFE\r\nSampling rate                            : 48.0 KHz\r\nBit depth                                : 16 bits\r\nCompression mode                         : Lossy\r\nStream size                              : 398 MiB (27%)\r\nAlignment                                : Aligned on interleaves\r\nInterleave, duration                     : 64 ms (1.60 video frames)\r\nInterleave, preload duration             : 192 ms\r\n\r\n\r\n\r\n\r\n\r\n\r\nSOURCE\r\nVideo : PAL DVDR-B1L\r\nAudio : PAL DVDR-B1L\r\n\r\n\r\n\r\nJUST A LITTLE MESS WITH THIS ADDES BIT OF CONTRAS\r\nRESIZED BIT TWEAKED BIT SHARPEN in\r\nSAT HUE and few othere things\r\n\r\n\r\n\r\n\r\nPLOT\r\n\r\nWhen a tragedy strikes close to home,\r\nfour police officers struggle with their faith\r\nand their roles as husbands and fathers; together\r\nthey make a decision that will change all of their lives.\r\n\r\n\r\n\r\n\r\n\r\nGenres: Drama\r\n\r\n\r\nDirector: Alex Kendrick\r\n\r\nWriters: Stephen Kendrick, Alex Kendrick\r\n\r\nStars: Alex Kendrick, Ken Bevel and Kevin Downes\r\n\r\n\r\nIMDB: http://www.imdb.com/title/tt1630036/\r\n\t\t'],
+	 'link': [u'magnet:?xt=urn:btih:a17256c96c26fdcfc24f367f752d236a601afa41&dn=Courageous+2011+DVDRIP+XVID+AC3+-+Xtreme+Encode.&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:a17256c96c26fdcfc24f367f752d236a601afa41&dn=Courageous+2011+DVDRIP+XVID+AC3+-+Xtreme+Encode.&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'Courageous 2011 DVDRIP XVID AC3 - Xtreme Encode. (download torrent) - TPB']}
+2012-02-10 17:12:59+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000049> (referer: None)
+2012-02-10 17:12:59+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000050> (referer: None)
+2012-02-10 17:12:59+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000049>
+	{'desc': [u'IKnowThatGirl - Lexi Austin.mp4\r\n\r\nTags: sex, xXx, hardcore\r\n\r\nScreens:\r\n ',
+	          u'\t\t'],
+	 'link': [u'magnet:?xt=urn:btih:e0f32a80c2bc34a6efcff2e2413c4b64669a6b5d&dn=IKnowThatGirl+-+Lexi+Austin.mp4&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:e0f32a80c2bc34a6efcff2e2413c4b64669a6b5d&dn=IKnowThatGirl+-+Lexi+Austin.mp4&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'IKnowThatGirl - Lexi Austin.mp4 (download torrent) - TPB']}
+2012-02-10 17:12:59+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000050>
+	{'desc': [u"Jessicka Rabid (2010)\r\nGenres: Horror\r\nRuntime: 82 mins       \r\nPlot Outline:\r\nThere's Something Wrong With Jessicka\r\n\r\nDirector: Matthew Reel,\r\n\r\nCast:\r\n\u0393\u0393\xe9\xbc\xf3 Jason Foster as Billy\r\n\u0393\u0393\xe9\xbc\xf3 Trent Haaga as Marley Hoffman\r\n\u0393\u0393\xe9\xbc\xf3 Elske McCain as Jessicka\r\n\u0393\u0393\xe9\xbc\xf3 Cisiany Olivar as Abby Hoffman\r\n\u0393\u0393\xe9\xbc\xf3 Keith Marcellus Parham as Dick Black\r\n\u0393\u0393\xe9\xbc\xf3 Faith Preston as Denise\r\n\u0393\u0393\xe9\xbc\xf3 Matthew Reel as Porn Director\r\n\u0393\u0393\xe9\xbc\xf3 Jeff Sisson as Brad Hoffman\r\n\u0393\u0393\xe9\xbc\xf3 Mike Wyatt as Mike\r\nDescription\tJessicka.Rabid.2010.DVDRiP.XviD-SiC\r\n\r\nIMDB Link: ",
+	          u"\r\n\r\nDescription: There's Something Wrong With Jessicka\r\n\r\n\r\nGeneral\r\nComplete name: Jessicka.Rabid.2010.DVDRiP.XviD-SiC.avi\r\nFormat : AVI\r\nFormat/Info: Audio Video Interleave\r\nFile size: 1.37 GiB\r\nDuration : 1h 19mn\r\nOverall bit rate : 2 476 Kbps\r\n\r\nVideo\r\nID : 0\r\nFormat : MPEG-4 Visual\r\nFormat profile : Simple@L3\r\nFormat settings, BVOP: 2\r\nFormat settings, QPel: No\r\nFormat settings, GMC : No warppoints\r\nFormat settings, Matrix: Default (H.263)\r\nMuxing mode: Packed bitstream\r\nCodec ID : XVID\r\nCodec ID/Hint: XviD\r\nDuration : 1h 19mn\r\nBit rate : 2 212 Kbps\r\nWidth: 720 pixels\r\nHeight : 352 pixels\r\nDisplay aspect ratio : 2.045\r\nFrame rate : 23.976 fps\r\nColor space: YUV\r\nChroma subsampling : 4:2:0\r\nBit depth: 8 bits\r\nScan type: Progressive\r\nCompression mode : Lossy\r\nBits/(Pixel*Frame) : 0.364\r\nStream size: 1.22 GiB (89%)\r\nWriting library: XviD 1.0.3 (UTC 2004-12-20)\r\n\r\nAudio\r\nID : 1\r\nFormat : AC-3\r\nFormat/Info: Audio Coding 3\r\nMode extension : CM (complete main)\r\nCodec ID : 2000\r\nDuration : 1h 19mn\r\nBit rate mode: Constant\r\nBit rate : 256 Kbps\r\nChannel(s) : 2 channels\r\nChannel positions: Front: L R\r\nSampling rate: 48.0 KHz\r\nBit depth: 16 bits\r\nCompression mode : Lossy\r\nStream size: 145 MiB (10%)\r\nAlignment: Aligned on interleaves\r\nInterleave, duration : 64 ms (1.53 video frames)\r\nInterleave, preload duration : 192 ms\r\nTitle: VTS_04_1 T80 2_0ch 192Kbps DELAY 0ms_new\t\t"],
+	 'link': [u'magnet:?xt=urn:btih:e7f22b2d4e4b53906d83b6149c621bc79dfcbb28&dn=Jessicka.Rabid.2010.DVDRiP.XviD-SiC.&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:e7f22b2d4e4b53906d83b6149c621bc79dfcbb28&dn=Jessicka.Rabid.2010.DVDRiP.XviD-SiC.&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'Jessicka.Rabid.2010.DVDRiP.XviD-SiC. (download torrent) - TPB']}
+2012-02-10 17:12:59+0530 [pirate] DEBUG: Crawled (404) <GET http://thepiratebay.se/torrent/7000051> (referer: None)
+2012-02-10 17:12:59+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000053> (referer: None)
+2012-02-10 17:12:59+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000053>
+	{'desc': [u'stand-up komikeren ray romano spiller hovedrollen som ray barone,en suksessfull sportsskribent og hengiven ektemann til debra patricia heaton,beethoven),som m\xe5 hanskes med hans bror og foreldre,som tilfeldigvis bor rett over gata.frank(peter boyle)og marie(doris roberts)elsker og blande seg opp i s\xf8nnens liv,mens den eldre broren robert(brad garret)av og til er litt misunnelig p\xe5 hans suksess.ikke desto mindre greier ray \xe5 beholde b\xe5de en positiv livsinnstilling og sin sans for humor idet han balanserer familie-og arbeidsliv.\r\n\r\n\r\n\r\n\r\n\r\n\r\n              Bes\xf8k *--| NorskBits . com |--* for att f\xe5 flere godteri biter!\t\t\t'],
+	 'link': [u'magnet:?xt=urn:btih:155d0e9c9a182b61c6d9633dd1fe35c5a9e9b18e&dn=EVERYBODY_LOVES_RAYMOND_DISC_2+med+norsk+dansk+svensk+text+med+m&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:155d0e9c9a182b61c6d9633dd1fe35c5a9e9b18e&dn=EVERYBODY_LOVES_RAYMOND_DISC_2+med+norsk+dansk+svensk+text+med+m&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'EVERYBODY_LOVES_RAYMOND_DISC_2 med norsk dansk svensk text med m (download torrent) - TPB']}
+2012-02-10 17:12:59+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000054> (referer: None)
+2012-02-10 17:12:59+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000054>
+	{'desc': [u'50 Amazing Abstract Wallpapers 1280 X 960\r\n\r\n50 JPG | 1280 X 960 Px | 13 Mb\t\t'],
+	 'link': [u'magnet:?xt=urn:btih:8b26d407268e34ee43ad552758a8df7a39543454&dn=50+Amazing+Abstract+Wallpapers+1280+X+960&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:8b26d407268e34ee43ad552758a8df7a39543454&dn=50+Amazing+Abstract+Wallpapers+1280+X+960&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'50 Amazing Abstract Wallpapers 1280 X 960 (download torrent) - TPB']}
+2012-02-10 17:12:59+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000055> (referer: None)
+2012-02-10 17:12:59+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000055>
+	{'desc': [u'.  TD Sign UP is open until 1st of January. so you better hurry up ;) ENJOYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY!!!!\r\n  ',
+	          u'\r\n\r\n\r\nTo Avoid Fakes, ALWAYS Check That The Torrent Was Added By: TvTeam.\r\n\r\n\r\n               www . TorrentDay . Com \r\n(((((((((((((= Enjoy No RAR releases =))))))))))))))))))))\r\n\r\n...................................NFO:....................................\r\n\r\n.         \n                ()    _______    ____  ____   ______     ______\n   #           #\\|\\  |       |  |    \\/    |/        \\ /        \\\n   #      _    #   | |       |  |          |          |          |\n   # _   ~()~  #  /  |       |__|          |          |     _    |\n   #| |  /))   #_|   |          |          |    /\\    |    | |   |\n   #| |_/ |    #     |          |          |   |__|   |    |_|   |\n   #`.   )\\    #     |          |          |    __    |          |\n   #  )_( /_   #     |__________|___|\\/|___|___|  |___|\\________/\n __________________________________________________________________\n|__________________________________________________________________|\n \n   //-&gt; Info:\n\n Pawn.Stars.S04E71.Hole.in.One.HDTV.XviD-LMAO                                \n                                     \n      Release Date...: 2012-01-31                                   \n      Release Size...: 174.14Mb                                     \n      Play Time......: 22:00                                        \n      Resolution.....: 624x352                                      \n      Video Bitrate..: 939kbps                                      \n      Video Framerate: 23.976                                                \n\n   //-&gt; Notes:\n      \n                                                                   \n                                                                  \n       \n   //-&gt; Greets:\n\n      Your girlfriend, sister, wife, and mom..\n\n __________________________________________________________________\n|__________________________________________________________________|\t\t'],
+	 'link': [u'magnet:?xt=urn:btih:0a1002f4365c4a2c3aabd9546f638796c0318c6a&dn=Pawn.Stars.S04E71.Hole.in.One.HDTV.XviD-LMAO&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:0a1002f4365c4a2c3aabd9546f638796c0318c6a&dn=Pawn.Stars.S04E71.Hole.in.One.HDTV.XviD-LMAO&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'Pawn.Stars.S04E71.Hole.in.One.HDTV.XviD-LMAO (download torrent) - TPB']}
+2012-02-10 17:13:00+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000052> (referer: None)
+2012-02-10 17:13:00+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000052>
+	{'desc': [u' ',
+	          u'\r\n\r\nTwo FBI agents investigating the murder of civil rights workers during the 60s seek to breach the conspiracy of silence in a small Southern town where segregation divides black and white. The younger agent trained in FBI school runs up against the small town ways of his former Sheriff partner.\r\n\r\nStars: Gene Hackman, Willem Dafoe and Frances McDormand\r\n  ',
+	          u' ',
+	          u' ',
+	          u' ',
+	          u' ',
+	          u' ',
+	          u'\r\n\r\nFormat..................... MP4\r\nMovie Style................ drama-true story \r\nSize....................... 731MB\r\nResolution................. 720x392 \r\nAspect Ratio............... 16:9\r\nFrame Rate................. 23.976 fps\r\nLanguage .................. English\r\nSubtitles.................. English [srt] \r\nSample..................... Yes\r\nRun Time................... 2h 6m\r\nSource..................... HDTV [rizzo]\r\nAudio...................... 100kbs\r\nVideo...................... 703Kbps\r\n\r\nsmall logo appears 4 times during movie for about a minute....see last screen \r\n\r\nmore subs at ',
+	          u'\r\n            ',
+	          u'\r\n\r\njoin the piratebay forum             ',
+	          u'\r\n\r\n                               ___gppgggQNgpgg,__                              \r\n                          _pgNM0000000000000000000#g,_                         \r\n                       _g000000000000MM#000000000000000g,                      \r\n                    _p0000000M0M0MMMB0##MMNNMN0#MM00000000p,                   \r\n                  g#00000MM0NM0MM0#0BM#B00Q000Q0N0N0#0000000Ng                 \r\n               _g000000M#MMM0#M0N#NBQ#&QQQ&000NN##QB0QN0M00000#g               \r\n              y000000NM0BM0N#BMN000N00NNMN0N0N000QMR&&MBD0NM0000&q             \r\n            _M0000M0#NNN0MM##0Ng                jM#0M#00NBMBMM0000#_           \r\n           p0000MQN#QNB#N00#00M0&,            _000&NRQ0Q#M#M00MM0000g          \r\n         _0000M00MM#M0NMMM#MM0B000            00#MMMQMM0QN0N0BM0#0000&         \r\n        j0000MMM0MMM0#0QQMM0##Q#00           ]00&0QM00MM##NQ#N0MMB0000N,       \r\n       j0000&00EEB00#0NQM#&###0000           ]00M&&&0B&N#0Q#NN#0BMMM0000,      \r\n      j0000#M0MMMMB#MM&MMM0#E#DN00           ]000000MM0#EQN0&NN0NB#MN0000,     \r\n     ,0000N0#NNB#0#&NQMMM0##M#QB00           ]00NQ00NN0#NN0&MMQ0B0NMMM0000     \r\n     00000#N###00N##&Q#0##M#M00&00           ]00BN0&MMMB0#&0000#N0#MMQ0000#    \r\n    000000####NM##M000MM0##0MQN000           ]00N0QQQB#M0BMM00##M#N00&#M000&   \r\n   j00000#BR0Q0MMMNNN0N#N##0&QMMM0           ]0M0QQN00MQ0&#NN00&MMQQNNQ0M000e  \r\n   0000M0N00QD#0NMMM##N00BNQN000R0           ]00MQDQM0&#M#M0MMM00&&NMMBM0000&  \r\n  Q0000MMMMM0#M0Q00M#NMM0#&M0MN0#0           ]00&N0W000#NN0N#00##QN&00NR#M0006 \r\n  0000#E#0MMMBQQQQ0#BMNN00NNQMM000    _00,   ]08g0M0gMR0M00#&0MMQ0&#MM0#800000 \r\n j000####&M000000###NB#M#N&MMMMMM0   p0000g  ]0NQQQM#M#QBBE#&M#BN0NNM0##MM0000c\r\n B000MM0000# 0000000M0NN000#B0#00M .00@` 00& ]00@&0MN#0Q0N00000000F 00#MM00000#\r\n 000M#N&&&M#  M0000000000000000N00g00M    M000N0NM00000000000000@\'  00#MM#&M000\r\n]000NMB&&WM#                     000^   __ `00&                     000MB&MM000\r\nj0000#Q000M#                   y00F   yM9    M00,                   0NM000M8000\r\n#0000&&#BQM#                  p00\'   yNNL     ~00g                  0M0MQQQ0#00\r\nQ00#00###NN#                y00M    ]0QMN0g     M0&,                0MM&KM&&000\r\nQ00NM#MMB0M#                ~00g    #MMM#QN     p00\'                0N&MMM0M000\r\nB00&0#M#MMM#                  M0&_  4N&0EN#    00F                  0M0N0&0M000\r\nB000MM00MMN#                   "00g  *N0N0~  j00\'                   00MMM#0N000\r\n]000#0BMQ00#                     M0&   ``   p0@                     00MM##M0000\r\n 0000NNQM0N#  gM00M00M00M00M00MMMMM00g    ,00MMM00000000M00M00M0&g  0M0N#0M0000\r\n 0000Q0Q#NN# 00000000MMMM0MM&MQM0# ^00&  p00^]M#0&NQ#BN#MM0M000000& 0N###NN000&\r\n ]000MM#MM000MMMM&0M#0&&Q0Q00#M0M0   M0000M  ]##QQ0M#BM0N0&M#NMMMMM0MMMM&MM000f\r\n  00000MQEMMMM00&Q0MMQQQBMM#MMMMM0    "00\'   ]NNQ000##&0MQ00MM#QKBM0N##M#B0000 \r\n  B000BNM##BMM0M0M00M00MMMMMM#M0M0           ]#NMMM##N&NN&0&#MQM0MMMMMNN#Q000f \r\n  ~000NM00Q&&M000#MMQ&MM00NNMBMBN0           ]00M0#N0MNMM0B0#0M0M0MMMEM0M0000  \r\n   4000MMg00N0M0#&&0M#B&M0M##0N0N0           ]0MM##QMNMN##0#0M0N&#NMM00&N000f  \r\n    0000&QN0#QM#QM#Q0R0MQM00Q##M00           ]0M#M0&MMM0#MMMQ0&&MQ0#0MM0000#   \r\n     0000M0NNQNBM#0MEN0MQQK00#0M00           ]00#MMB#BNN&N#0N#M000MMN0M0000    \r\n     ]000000MMQ00QQ#0MMM00##MM0000           ]00NNNNB0#0MBMp#N000MMM#00000^    \r\n      40000QM0000Q0#MM00MMM##QMM00           ]00NKBNN####QN00#M00#0#N0000\'     \r\n       70000MQMMM0#MMM00&00#NQMB00           ]00M#N00EBDNMM0MN0M0#0#0000`      \r\n        "0000&0N0##&N0&MNN#Q0M0#00           ]00N#0#0#0N0##&0NQ0M0B0000^       \r\n         ~0000NQMMMM00MNN0&MBMM000            00#MMM##00&#B0&BW0M00000         \r\n           M00000N&&#NMQ0#00M0M00\'            "00#MMMBQ###&&#M&00000M          \r\n            ^0000M0N0BQM#BM&E#NM                MMK#&00##0&MQ000000^           \r\n              M00000#QMM@M##NN0000000000000000000M0&Q8MMBM#N00000F             \r\n               `M0000000M####0####################0QD##M0000000P               \r\n                  M0000000#00#0B0&N0&N0&N0&N0&N0MMNN#M000000MF                 \r\n                    "00000000N00MM00N0NN0NN0NN0M#NM0000000M~                   \r\n                       ~M00000000000#0N000N00M000000000M~                      \r\n                          ~M0000000000000000000000MM~`                         \r\n                               `~~MMMMMMMMMMMF~^`                              \t\t'],
+	 'link': [u'magnet:?xt=urn:btih:a748fc6d336d0835ac2446e15fa01a63fef78987&dn=Mississippi+Burning+%5B1988%5D+HDTV-Rip+480p+x264+%5BZeberzee%5D&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:a748fc6d336d0835ac2446e15fa01a63fef78987&dn=Mississippi+Burning+%5B1988%5D+HDTV-Rip+480p+x264+%5BZeberzee%5D&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'Mississippi Burning [1988] HDTV-Rip 480p x264 [Zeberzee] (download torrent) - TPB']}
+2012-02-10 17:13:00+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000057> (referer: None)
+2012-02-10 17:13:00+0530 [pirate] DEBUG: Crawled (404) <GET http://thepiratebay.se/torrent/7000058> (referer: None)
+2012-02-10 17:13:00+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000056> (referer: None)
+2012-02-10 17:13:00+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000057>
+	{'desc': [u'.  TD Sign UP is open until 1st of January. so you better hurry up ;) ENJOYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY!!!!\r\n  ',
+	          u'\r\n\r\n\r\nTo Avoid Fakes, ALWAYS Check That The Torrent Was Added By: TvTeam.\r\n\r\n\r\n               www . TorrentDay . Com \r\n(((((((((((((= Enjoy No RAR releases =))))))))))))))))))))\r\n\r\n...................................NFO:....................................\r\n\r\n.         \n                ()    _______    ____  ____   ______     ______\n   #           #\\|\\  |       |  |    \\/    |/        \\ /        \\\n   #      _    #   | |       |  |          |          |          |\n   # _   ~()~  #  /  |       |__|          |          |     _    |\n   #| |  /))   #_|   |          |          |    /\\    |    | |   |\n   #| |_/ |    #     |          |          |   |__|   |    |_|   |\n   #`.   )\\    #     |          |          |    __    |          |\n   #  )_( /_   #     |__________|___|\\/|___|___|  |___|\\________/\n __________________________________________________________________\n|__________________________________________________________________|\n \n   //-&gt; Info:\n\n Pawn.Stars.S04E72.Yankee.Panky.HDTV.XviD-LMAO                               \n                                     \n      Release Date...: 2012-01-31                                   \n      Release Size...: 174.13Mb                                     \n      Play Time......: 22:00                                        \n      Resolution.....: 624x352                                      \n      Video Bitrate..: 937kbps                                      \n      Video Framerate: 23.976                                                \n\n   //-&gt; Notes:\n      \n                                                                   \n                                                                  \n       \n   //-&gt; Greets:\n\n      Your girlfriend, sister, wife, and mom..\n\n __________________________________________________________________\n|__________________________________________________________________|\t\t'],
+	 'link': [u'magnet:?xt=urn:btih:257bac472def043ebb52c0e9d1139b8bd43aaa7c&dn=Pawn.Stars.S04E72.Yankee.Panky.HDTV.XviD-LMAO&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:257bac472def043ebb52c0e9d1139b8bd43aaa7c&dn=Pawn.Stars.S04E72.Yankee.Panky.HDTV.XviD-LMAO&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'Pawn.Stars.S04E72.Yankee.Panky.HDTV.XviD-LMAO (download torrent) - TPB']}
+2012-02-10 17:13:00+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000056>
+	{'desc': [u'JizzBomb - Kagney Linn Karter.wmv\r\n\r\nTags: Sex, xXx, Hot\r\n\r\nScreens:\r\n ',
+	          u'\r\n ',
+	          u'\t\t'],
+	 'link': [u'magnet:?xt=urn:btih:c0f17850ac0e3455744a2a4e742972a06f4496f4&dn=JizzBomb+-+Kagney+Linn+Karter.wmv&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:c0f17850ac0e3455744a2a4e742972a06f4496f4&dn=JizzBomb+-+Kagney+Linn+Karter.wmv&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'JizzBomb - Kagney Linn Karter.wmv (download torrent) - TPB']}
+2012-02-10 17:13:00+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000059> (referer: None)
+2012-02-10 17:13:00+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000059>
+	{'desc': [u'Esta suite distribuida por RedGiantSoftware a\xf1ade increibles funcionalidades a tu Adobe After Effects: sistemas de part\xedculas, luces volum\xe9tricas, generaci\xf3n de superficies 3D, extracci\xf3n de valores de audio mediante espectrograma...\t\t'],
+	 'link': [u'magnet:?xt=urn:btih:8f833259865e540257fd739420a8643027b0c671&dn=Trapcode+Suite+En+After+Effects&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:8f833259865e540257fd739420a8643027b0c671&dn=Trapcode+Suite+En+After+Effects&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'Trapcode Suite En After Effects (download torrent) - TPB']}
+2012-02-10 17:13:00+0530 [pirate] DEBUG: Crawled (200) <GET http://thepiratebay.se/torrent/7000061> (referer: None)
+2012-02-10 17:13:00+0530 [pirate] DEBUG: Scraped from <200 http://thepiratebay.se/torrent/7000061>
+	{'desc': [u'AssHoleFever - Debbie White.mp4\r\n\r\nTags: Sex, Anal, Xxx, hardcore\r\n\r\nScreens:\r\n ',
+	          u'\r\n ',
+	          u'\t\t'],
+	 'link': [u'magnet:?xt=urn:btih:7fc095f65ea77d1d962b4eb04c0518c1ee17aaa3&dn=AssHoleFever+-+Debbie+White.mp4&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80',
+	          u'magnet:?xt=urn:btih:7fc095f65ea77d1d962b4eb04c0518c1ee17aaa3&dn=AssHoleFever+-+Debbie+White.mp4&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80'],
+	 'title': [u'AssHoleFever - Debbie White.mp4 (download torrent) - TPB']}
+2012-02-10 17:13:00+0530 [pirate] DEBUG: Crawled (404) <GET http://thepiratebay.se/torrent/7000062> (referer: None)
